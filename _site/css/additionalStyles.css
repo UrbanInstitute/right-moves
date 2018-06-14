@@ -1,0 +1,7 @@
+.div-container {
+  z-index: 0;
+}
+
+.div-container.active {
+  z-index: 100;
+}

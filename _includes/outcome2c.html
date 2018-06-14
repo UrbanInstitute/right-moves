@@ -1,0 +1,84 @@
+<div id="{{ include.id }}" class="div-container">
+
+  <a href="index.html" class="div-logo-global w-inline-block"><img src="images/title.svg"></a>
+    <div class="div-title">
+      <div class="div-screen-title">
+        <h2 class="heading">Your Choice</h2>
+        <h1>Move in with your friend</h1>
+      </div>
+    </div>
+    <div class="div-scenario">
+      <div class="div-slide-area">
+        <div data-animation="outin" data-easing="ease-in-quad" data-hide-arrows="1" data-autoplay-limit="1" data-duration="500" data-infinite="1" class="slider-outcomes w-slider">
+          <div class="w-slider-mask">
+            <div class="slide-outcome w-slide" data-ix="score-drop-{{include.id}}">
+              <p data-w-id="fdbdffcd-4ab8-2745-161d-dbbef5e94ba6" class="p-scenario">The move is a squeeze for your family. The disruption has increased your toddler’s tantrums, <strong>and your stress levels are through the roof.</strong></p>
+              <div class="div-animation-trigger" data-ix="ani-2up-scene-appear-{{include.id}}"></div>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="voucher-off-extra-{{include.id}}">
+              <p class="p-scenario">more text<strong></strong></p>
+              <div class="div-animation-trigger" data-ix="ani-2up-hide-{{include.id}}"></div>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="voucher-on-extra-{{include.id}}">
+              <p class="p-scenario voucher-text" data-ix="remove-score-{{include.id}}">Voucher text</p>
+              <div class="div-animation-trigger"></div>
+            </div>
+            <div class="slide-outcome w-slide">
+              <p class="p-scenario voucher-text">More voucher text</p>
+            </div>
+            <div class="slide-outcome w-slide">
+              <p class="p-scenario voucher-text">Even more voucher text</p>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="voucher-off-extra-{{include.id}}">
+              <p class="p-scenario"><a next="{{ include.next1 }}" class="move-button a-inline"><span class="span-question" data-ix="next-scene-trigger-{{include.id}}">Now let’s see how you’d navigate one more choice for your family</span></a></p>
+              <div class="div-null" data-ix="preview-score-{{include.id}}"></div>
+              <div class="div-animation-trigger" data-ix="ans02-hide-fam-{{include.id}}"></div>
+            </div>
+          </div>
+          <div class="arrow-left w-slider-arrow-left"><a href="#" class="slider-next-btn left w-inline-block"></a>
+            <div class="slider-icon w-icon-slider-left"></div>
+          </div>
+          <div class="arrow-right w-slider-arrow-right">
+            <div class="slider-icon w-icon-slider-right"></div><a href="#" class="slider-next-btn w-inline-block" data-ix="next-btn-load"></a></div>
+          <a next="{{ include.next1 }}" class="move-button arrow-right-last t-{{include.id}} w-inline-block">
+            <div class="slider-next-btn"></div>
+          </a>
+          <div class="slide-nav w-slider-nav"></div>
+        </div>
+      </div>
+    </div>
+    <div class="div-score-bottom t-{{ include.id }}">
+      <div class="div-meter-block w-clearfix">
+        <div class="div-meter-row">
+          <div class="t-meter-label">Health</div>
+          <div class="div-meter-cell"><img src="images/score-sprite-health.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-health.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-health.svg" class="image-bullet-sprite-empty t-{{include.id}}"></div>
+        </div>
+        <div class="div-meter-row">
+          <div class="t-meter-label">Education</div>
+          <div class="div-meter-cell"><img src="images/score-sprite-education.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-education.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-education.svg" class="image-bullet-sprite-empty t-{{include.id}}"></div>
+        </div>
+        <div class="div-meter-row">
+          <div class="t-meter-label">Financial</div>
+          <div class="div-meter-cell"><img src="images/score-sprite-financial.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-financial.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-financial.svg" class="image-bullet-sprite"></div>
+        </div>
+      </div>
+    </div>
+    <div class="div-voucher-area">
+      <div class="div-voucher-panel t-{{include.id}}">
+        <div class="div-voucher-panel-front">
+          <div class="div-voucher-title"><img src="images/title_1.svg" alt="But what if your family had a housing voucher?" class="img-voucher-title"></div><img src="images/hanger-long.svg" class="img-hanger"><img src="images/hanger-long.svg" class="img-hanger right-hanger"></div>
+      </div>
+    </div>
+    <div class="div-scenario-background"><img src="images/building-blue.svg" class="img-building-left"><img src="images/building-blue.svg" class="img-building-right-front"><img src="images/building-blue.svg" class="img-bulding-right-back"></div>
+    <div class="div-voucher-background on t-{{include.id}}"></div>
+    <div class="div-characters"><img src="images/ill-outcome1-choices.png" srcset="images/ill-outcome1-choices-p-500.png 500w, images/ill-outcome1-choices-p-800.png 800w, images/ill-outcome1-choices-p-1080.png 1080w, images/ill-outcome1-choices-p-1600.png 1600w, images/ill-outcome1-choices.png 1791w" sizes="(max-width: 2107px) 85vw, 1791px" class="img-s0-2-choices"><img src="images/ill-s2-1-houses.png" class="img-2up-left t-{{include.id}}" data-ix="illustration-hider"><img src="images/ill-o2c-tantrum.png" class="img-2up-right t-{{include.id}} tantrum" data-ix="illustration-hider"></div>
+    <div class="div-global-background css-gradient">
+      <div class="div-splitter"></div>
+    </div>
+  </div>  

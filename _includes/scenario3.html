@@ -1,0 +1,77 @@
+<div id="{{ include.id }}" class="div-container">
+
+  <a href="index.html" class="div-logo-global w-inline-block"><img src="images/title.svg"></a>
+    <div class="div-dimmer intro" data-ix="dimmer-dimmer"></div>
+    <div class="div-title">
+      <div class="div-screen-title">
+        <h2>Choice 3</h2>
+        <h1>A New Job, but Behind on Rent</h1>
+      </div>
+    </div>
+    <div class="div-scenario">
+      <div class="div-slide-area">
+        <div data-animation="outin" data-easing="ease-in-quad" data-hide-arrows="1" data-autoplay-limit="1" data-duration="500" data-infinite="1" class="slider-outcomes w-slider">
+          <div class="w-slider-mask">
+            <div class="slide-outcome w-slide">
+              <p data-w-id="fdbdffcd-4ab8-2745-161d-dbbef5e94ba6" class="p-scenario">After a stretch of unemployment, you find a new job. You have to be careful with your budget, but you feel like a burden has been lifted and you can finally catch up on past-due bills.</p>
+              <div class="div-animation-trigger" data-ix="ani-2up-scene-appear {{include.id}}"></div>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="car-appear {{include.id}}">
+              <p class="p-scenario">Unfortunately, you still owe money to the landlord from the months when you couldn’t pay the rent in full.</p>
+            </div>
+            <div class="slide-outcome w-slide">
+              <p class="p-scenario">So far, the landlord has been flexible about the late rent, but his patience is wearing thin.</p>
+              <div class="div-animation-trigger" data-ix="ani-2up-hide {{include.id}}"></div>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="next-scene-trigger {{include.id}}">
+              <p class="p-scenario">You consider moving, but you’re not sure you can find a better option with all the bad marks on your credit.<a next="{{ include.next1 }}" class="move-button a-inline"><span class="span-question" data-ix="dramatic-pause">What’s the right move?</span></a></p>
+            </div>
+          </div>
+          <div class="arrow-left w-slider-arrow-left"><a href="#" class="slider-next-btn left w-inline-block"></a>
+            <div class="slider-icon w-icon-slider-left"></div>
+          </div>
+          <div class="arrow-right w-slider-arrow-right"><a href="#" class="slider-next-btn w-inline-block" data-ix="next-btn-load"></a>
+            <div class="slider-icon w-icon-slider-right"></div>
+          </div>
+          <a next="{{ include.next1 }}" class="move-button arrow-right-last t-{{include.id}} w-inline-block">
+            <div class="slider-next-btn"></div>
+          </a>
+          <div class="slide-nav w-slider-nav"></div>
+        </div>
+      </div>
+    </div>
+    <div class="div-score-bottom">
+      <div class="div-meter-block w-clearfix">
+        <div class="div-meter-row">
+          <div class="t-meter-label">Health</div>
+          <div class="div-meter-cell"><img src="images/score-sprite-health.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-health.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-health.svg" class="image-bullet-sprite"></div>
+        </div>
+        <div class="div-meter-row">
+          <div class="t-meter-label">Education</div>
+          <div class="div-meter-cell"><img src="images/score-sprite-education.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-education.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-education.svg" class="image-bullet-sprite"></div>
+        </div>
+        <div class="div-meter-row">
+          <div class="t-meter-label">Financial</div>
+          <div class="div-meter-cell"><img src="images/score-sprite-financial.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-financial.svg" class="image-bullet-sprite"></div>
+          <div class="div-meter-cell"><img src="images/score-sprite-financial.svg" class="image-bullet-sprite"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- What is this? DW -->
+    <a href="decision1.html" class="div-navigation hidden w-inline-block" data-ix="next-hover {{include.id}}">
+      <h3>What&#x27;s the<br>right move?</h3>
+      <div class="div-nav-next-btn"><img src="images/controller-down.svg" class="img-next-btn-arrow t-{{include.id}}"><img src="images/next-btn-area.svg" class="img-next-btn-area"></div>
+    </a>
+    <div class="div-characters"><img src="images/ill-s1-1-building.png" srcset="images/ill-s1-1-building-p-500.png 500w, images/ill-s1-1-building.png 869w" sizes="25vw" class="img-2up-left t-{{include.id}} office" data-ix="illustration-hider"><img src="images/ill-s3-1-thinking.png" srcset="images/ill-s3-1-thinking-p-500.png 500w, images/ill-s3-1-thinking-p-800.png 800w, images/ill-s3-1-thinking.png 926w" sizes="25vw" class="img-2up-right t-{{include.id}}" data-ix="illustration-hider"></div>
+    <div class="div-scenario-background" data-ix="load-scene1"><img src="images/building-blue.svg" class="img-building-left"><img src="images/building-blue.svg" class="img-building-right-front"><img src="images/building-blue.svg" class="img-bulding-right-back"></div>
+    <div class="div-global-background css-gradient">
+      <div class="div-splitter"></div>
+    </div>
+  </div>
+  
