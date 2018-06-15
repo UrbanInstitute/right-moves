@@ -14,6 +14,8 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 		- You are here.
 	* index.html 
 		- Contains the _include/ html files that are merged in, with the variables on each entry that will be used within that _include file. Will be merged into _layouts/default.html
+	* index_working.html
+		- As noted below, the last three includes are currently causing the resulting page to be buggy. I have, therefore created a file that should work without those more major glitches (still has the voucher glitch, etc), here. 
 	* include_list.html
 		- list of includes that can be added/removed to index.html. Backup include list 
 	* _config.yml
@@ -78,16 +80,15 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 
 ## To Do (in rough order of importance)
 
-- Fix all index.html links at the head of each _includes file. 
 - Fix the errors related to the last three _include/ files (see known issues). 
 - Fix voucher style errors (see known issues)
-- 
 - Add remaining copy into the slides that don't have the complete copy. Emily should know where to find this final copy.
 - Edit all clickable items to have `cursor:pointer` styles.
 - Add in links to the `/_includes/conclusion.html` file.
 - Make all "buttons" move up and down on hover
 - Fix resize issues (see below)
 - Other style changes
+- Figure out how to publish the _site folder to apps-staging
 - circulate to John, Maya, et al.
 - uncomment google tag/analytics/etc
 - get metas and shares from Nicole
