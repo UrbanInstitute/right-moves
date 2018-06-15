@@ -15,4 +15,6 @@ layout: default
 	{% include outcome2c.html id="outcome2c" next1="scenario3" %}
 	{% include scenario3.html id="scenario3" next1="decision3" %}
 	{% include decision3.html id="decision3" next1="outcome3a" next2="outcome3b" %}
-	
+	{% include outcome3a.html id="outcome3a" next1="conclusion" %}
+	{% include outcome3b.html id="outcome3b" next1="conclusion" %}
+	{% include conclusion.html id="conclusion"%}
