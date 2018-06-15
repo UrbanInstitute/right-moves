@@ -94,6 +94,10 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 - get metas and shares from Nicole
 - Publish
 
+### Possible enhancements?
+
+- It may be preferable to "load" or display each slide on the advancement to that slide, rather than the current solution which just moved it up in the z-index. For some reason, the display: none vs. display: block option was not working with the webflow but changing the z-index was. 
+
 ## Known Issues
 
 ### Big Picture
