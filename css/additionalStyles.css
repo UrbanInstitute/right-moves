@@ -10,11 +10,13 @@
   /*left: 0px;*/
 }
 
+
 html.w-mod-js *[data-ix="next-btn-load"].animate {
 	opacity: 1;
-	-webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, background-color 0.2s ease 0s, opacity 800ms, transform 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, background-color 0.2s ease 0s, opacity 800ms, transform 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transform: translateX(0px) translateY(0px) translateZ(0px);
+	-webkit-transition: opacity 800ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: opacity 800ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);	
+
 }
 
 /*

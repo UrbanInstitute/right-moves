@@ -1,4 +1,4 @@
-$(".move-button").click(function(e) {
+$(".move-button").click(function(e) {	
 	// e.stopPropagation()
 
 	// make all containers inactive
@@ -10,6 +10,18 @@ $(".move-button").click(function(e) {
 
 	//trigger the things that are supposed to happen on page appear
 	$("#" + nextItem + " *[data-ix='next-btn-load']").addClass("animate")
+
+
+	// $(".slide-outcome").click(function(e) {
+	// 	e.stopPropagation()
+		
+	// 	console.log('click')
+	// 	if (!$("#" + nextItem + ".active .slide-outcome.active").length) {
+	// 		console.log('none')
+	// 	} else {			
+	// 		console.log('some')
+	// 	}
+	// });
 
 
 })
