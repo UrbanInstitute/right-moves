@@ -80,13 +80,13 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 
 ## To Do (in rough order of importance)
 
-- Fix the errors related to the last three _include/ files (see known issues). 
+- ~Fix the errors related to the last three _include/ files (see known issues).~
 - Fix voucher style errors (see known issues)
 - Add remaining copy into the slides that don't have the complete copy. Emily should know where to find this final copy.
 - Edit all clickable items to have `cursor:pointer` styles.
 - Add in links to the `/_includes/conclusion.html` file.
 - Make all "buttons" move up and down on hover
-- Fix resize issues (see below)
+- Fix resize issues
 - Other style changes
 - Figure out how to publish the _site folder to apps-staging
 - circulate to John, Maya, et al.
@@ -117,6 +117,8 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 	- Additionally, I would test if these files are placed early in the sequence, if they would still cause the same problems. 
 
 ## Webflow Animations that appear to not be functioning or called. 
+
+(note: this isn't a necessarily a problem, but rather an FYI)
 
 At the end of the project, it may make sense to remove these from the html of the includes, since we don't really know why they're there and what they are doing. My belief is that they're artifacts of some other part of John's design proces. He might have info if you explain to him where its happening. 
 
