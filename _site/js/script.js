@@ -27,11 +27,11 @@ $(".move-button").click(function(e) {
 })
 
 
-$("[data-ix]").click(function(e) {
+// $("[data-ix]").click(function(e) {
 
-	console.log($(this).attr("data-ix"))
+// 	console.log($(this).attr("data-ix"))
 
-});
+// });
 
 
 
