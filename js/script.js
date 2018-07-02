@@ -1,3 +1,5 @@
+console.log(actions)
+
 // On load, allow first TWO slides to exist with z indexs differing them...
 // Then, every move-button, advance to the under one, destroy the old, and make the on deck one become underneath. 
 
@@ -15,8 +17,16 @@ $(".move-button").click(function(e) {
 	//trigger the things that are supposed to happen on page appear
 		// if other animations here, search for them, then trigger them 
 	setTimeout(function () {
-        console.log('hello')
-        $("#" + nextItem + " *[data-ix='next-btn-load']").addClass("animate")
+        // $("#" + nextItem + ".active *[data-ix='next-btn-load']").addClass("animate")
+		
+		var transitionBucket = actions[nextItem][0].transitions;
+		for (var i = 0; i < transitionBucket.length; i++) {
+			// console.log(transitionBucket[i])
+			// console.log($("#" + nextItem + ".active " + transitionBucket[i].selectedItem));
+
+			$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).addClass(transitionBucket[i].addedClass)
+		}
+
     }, 20);
 
 	// hide the left arrow at first
@@ -26,14 +36,8 @@ $(".move-button").click(function(e) {
 	$("#" + nextItem + ".active .slide-outcome").eq(0).addClass("active")
 
 	// on forward or backward button
-	$(".slider-next-btn.w-inline-block").click(function(e) {
+	$("#" + nextItem + " .slider-next-btn.w-inline-block").click(function(e) {
 		e.stopPropagation()
-
-		// find the active ".slide-outcome" and get index
-		var subslideIndex = $("#" + nextItem + ".active .slide-outcome.active").index();			
-
-		// remove active class
-		$("#" + nextItem + ".active .slide-outcome").removeClass("active");		
 
 		// figure out if its going up or back
 		if ($(this).hasClass("left")) {
@@ -41,33 +45,43 @@ $(".move-button").click(function(e) {
 		} else {
 			var direction = 1;
 		}
-		
+
+		// find the active ".slide-outcome" and get index
+		var subslideIndex = $("#" + nextItem + ".active .slide-outcome.active").index() + direction;
+
+		// remove active class
+		$("#" + nextItem + ".active .slide-outcome").removeClass("active");		
+
 		// advance active class to next ".slide-outcome"
-		$("#" + nextItem + ".active .slide-outcome").eq(subslideIndex+(direction)).addClass("active")	
+		setTimeout(function () {
+	        $("#" + nextItem + ".active .slide-outcome").eq(subslideIndex).addClass("active")
+	    }, 250);		
+
 			// If there's other animations associated with this, search for them, and trigger them.
+			// have to be able to add if forward and remove if going backward. 
+			var transitionBucket = actions[nextItem][subslideIndex].transitions;
+			for (var i = 0; i < transitionBucket.length; i++) {
+				// console.log(transitionBucket[i])
+				// console.log($("#" + nextItem + ".active " + transitionBucket[i].selectedItem));
 
-
+				$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).addClass(transitionBucket[i].addedClass)
+			}
 
 		// at the end of the slide
 
-		if (subslideIndex+(direction)+1 === $("#" + nextItem + ".active .slide-outcome").length) {
+		if (subslideIndex+1 === $("#" + nextItem + ".active .slide-outcome").length) {
 			console.log("end")
 			// at the end, swap out the right arrows
 			$("#" + nextItem + ".active .arrow-right").addClass("disappear")
 			$("#" + nextItem + ".active .arrow-right-last").addClass("appear")
-		} else if (subslideIndex+direction === 0) {
+		} else if (subslideIndex === 0) {
 			console.log("start")
 			$("#" + nextItem + ".active .arrow-left").addClass("disappear")						
 		} else {
 			$("#" + nextItem + ".active .arrow-right").removeClass("disappear")
 			$("#" + nextItem + ".active .arrow-left").removeClass("disappear")
 			$("#" + nextItem + ".active .arrow-right-last").removeClass("appear")
-		}
-		
-
-		// console.log($("#" + nextItem + ".active .slide-outcome"));
-		// console.log($("#" + nextItem + ".active .slide-outcome").eq(2)["0"].innerText)
-		// console.log($("#" + nextItem + ".active .slide-outcome").first()["0"].innerText);
+		}		
 	});
 
 
