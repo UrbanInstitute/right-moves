@@ -79,15 +79,71 @@ html.w-mod-js *[data-ix="load-scene1"].popup {
 }
 
 html.w-mod-js *[data-ix="illustration-hider"] {
+	opacity: 1;
 	transition: opacity 500ms ease-in-out, transform 1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 html.w-mod-js *[data-ix="illustration-hider"].popup {
-	opacity: 1;
+	
     transform: translateX(0px) translateY(0px) translateZ(0px);
     transform-style: preserve-3d;
-    	
 }
+
+.div-decision-button {
+	opacity: 0;	
+	transition: opacity 800ms linear 250ms;
+}
+
+.div-decision-button.choice-2 {
+	transition: opacity 800ms linear 750ms;	
+}
+
+.div-decision-button.choice-3 {
+	transition: opacity 800ms linear 1250ms;		
+}
+
+.div-decision-button.appear {
+	opacity: 1;
+}
+
+.div-score-bottom.highlight {
+	transform-style: preserve-3d; 
+	/*transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19); 	*/
+	animation: highlight-score 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s 1;
+}
+
+@keyframes highlight-score {
+  0% {
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+  }
+  50% {
+    transform: scaleX(1.1) scaleY(1.1) scaleZ(1);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+  }
+}
+
+.image-bullet-sprite.lessen.pulse {
+	animation: pulse-bullet .2s linear 1.25s 3;	
+}
+
+.image-bullet-sprite.empty {
+	float: right;
+}
+
+@keyframes pulse-bullet {
+  0% {
+	float: right; 
+  }
+  50% {
+    float: left; 
+  }
+  100% {
+   	float: right; 
+  }
+}
+
 
 
 

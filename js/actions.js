@@ -11,7 +11,7 @@ var actions = {
 			"transitions":[
 				{
 					"selectedItem":"*[data-ix='next-btn-load']",
-					"addedClass":"animate"
+					"addedClass":"animate"					
 				}
 			]
 		},
@@ -20,7 +20,7 @@ var actions = {
 			"transitions":[
 				{
 					"selectedItem":".div-score-bottom",
-					"addedClass":"popup"
+					"addedClass":"popup"					
 				}
 			]
 		},
@@ -35,57 +35,210 @@ var actions = {
 			"transitions":[
 				{
 					"selectedItem":"*[data-ix='next-btn-load']",
-					"addedClass":"animate"
+					"addedClass":"animate"					
 				},
 				{
 					"selectedItem":".div-dimmer.intro",
-					"addedClass":"dim"
+					"addedClass":"dim"					
 				},
 				{
 					"selectedItem":".div-scenario-background",
-					"addedClass":"popup"
+					"addedClass":"popup"					
 				},
 				{
 					"selectedItem":".img-2up-right.building",
-					"addedClass":"popup"
+					"addedClass":"popup"					
 				},
 				{
 					"selectedItem":".img-2up-left.car",
-					"addedClass":"popup"
+					"addedClass":"popup"					
 				}
-
-				
+			]
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[
+				{
+					"selectedItem":".img-2up-right.building",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-left.car",
+					"addedClass":"popup"					
+				}
 			]
 		}
 	],
 	"decision1":[
 		{
 			"slide":0,
-			"transitions":[]
+			"transitions":[
+				{
+					"selectedItem":".div-decision-button.choice-1",
+					"addedClass":"appear"					
+				},{
+					"selectedItem":".div-decision-button.choice-2",
+					"addedClass":"appear"					
+				}]
 		}
 	],
 	"outcome1a":[
 		{
 			"slide":0,
+			"transitions":[
+				{
+					"selectedItem":"*[data-ix='next-btn-load']",
+					"addedClass":"animate"					
+				},
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"highlight"					
+				},
+				{
+					"selectedItem":".image-bullet-sprite.empty",
+					"addedClass":"pulse"
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"
+				}				
+			]
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[]
+		},
+		{
+			"slide":4,
 			"transitions":[]
 		}
 	],
 	"outcome1b":[
 		{
 			"slide":0,
+			"transitions":[
+				{
+					"selectedItem":"*[data-ix='next-btn-load']",
+					"addedClass":"animate"					
+				},
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"highlight"					
+				},
+				{
+					"selectedItem":".image-bullet-sprite.empty",
+					"addedClass":"pulse"
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"
+				}				
+			]
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[]
+		},
+		{
+			"slide":4,
 			"transitions":[]
 		}
 	],
 	"scenario2":[
 		{
 			"slide":0,
+			"transitions":[
+				{
+					"selectedItem":"*[data-ix='next-btn-load']",
+					"addedClass":"animate"					
+				},
+				{
+					"selectedItem":".div-dimmer.intro",
+					"addedClass":"dim"					
+				},
+				{
+					"selectedItem":".div-scenario-background",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-right.building",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-left.car",
+					"addedClass":"popup"					
+				}
+			]
+		},
+		{
+			"slide":1,
 			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[
+				{
+					"selectedItem":".img-2up-right.building",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-left.car",
+					"addedClass":"popup"					
+				}
+			]
 		}
 	],
 	"decision2":[
 		{
 			"slide":0,
-			"transitions":[]
+			"transitions":[
+				{
+					"selectedItem":".div-decision-button.choice-1",
+					"addedClass":"appear"					
+				},{
+					"selectedItem":".div-decision-button.choice-2",
+					"addedClass":"appear"					
+				},{
+					"selectedItem":".div-decision-button.choice-3",
+					"addedClass":"appear"					
+				}
+			]
 		}
 	],
 	"outcome2a":[

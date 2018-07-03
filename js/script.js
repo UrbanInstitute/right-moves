@@ -1,16 +1,16 @@
-console.log(actions)
+var healthbars = [3,3,3]
 
 // On load, allow first TWO slides to exist with z indexs differing them...
 // Then, every move-button, advance to the under one, destroy the old, and make the on deck one become underneath. 
 
 
-$(".move-button").click(function(e) {	
+$(".move-button").click(function(e) {
 	// e.stopPropagation()
 
 	// make all containers inactive
 	$(".div-container").removeClass("active");
-
-	var nextItem = $(this).attr("next");
+	
+	var nextItem = $(this).attr("next");	
 
 	$("#" + nextItem).addClass("active");
 
@@ -28,6 +28,9 @@ $(".move-button").click(function(e) {
 		}
 
     }, 20);
+
+    // hide bullets that have been lost
+
 
 	// hide the left arrow at first
 	$("#" + nextItem + ".active .arrow-left").addClass("disappear")		
@@ -60,11 +63,8 @@ $(".move-button").click(function(e) {
 			// If there's other animations associated with this, search for them, and trigger them.
 			// have to be able to add if forward and remove if going backward. 
 			var transitionBucket = actions[nextItem][subslideIndex].transitions;
-			for (var i = 0; i < transitionBucket.length; i++) {
-				// console.log(transitionBucket[i])
-				// console.log($("#" + nextItem + ".active " + transitionBucket[i].selectedItem));
-
-				$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).addClass(transitionBucket[i].addedClass)
+			for (var i = 0; i < transitionBucket.length; i++) {							
+				$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).toggleClass(transitionBucket[i].addedClass)
 			}
 
 		// at the end of the slide
@@ -74,6 +74,11 @@ $(".move-button").click(function(e) {
 			// at the end, swap out the right arrows
 			$("#" + nextItem + ".active .arrow-right").addClass("disappear")
 			$("#" + nextItem + ".active .arrow-right-last").addClass("appear")
+
+			// make changes to the health bars global here
+			console.log($("#" + nextItem + ".active img[src='images/score-sprite-education.svg'].empty"))
+			
+
 		} else if (subslideIndex === 0) {
 			console.log("start")
 			$("#" + nextItem + ".active .arrow-left").addClass("disappear")						
