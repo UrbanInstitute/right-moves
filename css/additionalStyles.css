@@ -80,6 +80,7 @@ html.w-mod-js *[data-ix="load-scene1"].popup {
 
 html.w-mod-js *[data-ix="illustration-hider"] {
 	opacity: 1;
+	transform: translate(0px, 150%);
 	transition: opacity 500ms ease-in-out, transform 1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -110,6 +111,14 @@ html.w-mod-js *[data-ix="illustration-hider"].popup {
 	transform-style: preserve-3d; 
 	/*transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19); 	*/
 	animation: highlight-score 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s 1;
+}
+
+.div-score-bottom {
+	transition: transform 1200ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.div-score-bottom.popdown {
+    transform: scaleX(1) scaleY(1) scaleZ(1) translateX(0px) translateY(150%) translateZ(0px);
 }
 
 @keyframes highlight-score {
@@ -144,6 +153,29 @@ html.w-mod-js *[data-ix="illustration-hider"].popup {
   }
 }
 
+.div-voucher-background {
+	transition: opacity 800ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
 
+.div-voucher-background.fadein {
+    opacity: 1;
+    display: block;
+    
+}
 
+.div-voucher-panel {
+	transform-style: preserve-3d;
+	transform: translateX(0px) translateY(-100%) translateZ(0px);
+	display: block;
+	transition: transform 1300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);	
+}
+
+.div-voucher-panel.fadein {
+	transform: translateX(0px) translateY(0px) translateZ(0px);
+}
+
+html.w-mod-js *[data-ix="dimmer"].fadeout {
+	opacity: 0.65;
+	transition: opacity 800ms ease-in-out;
+}
 

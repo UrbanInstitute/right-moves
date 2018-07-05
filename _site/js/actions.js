@@ -87,7 +87,11 @@ var actions = {
 				},{
 					"selectedItem":".div-decision-button.choice-2",
 					"addedClass":"appear"					
-				}]
+				},{
+					"selectedItem":".div-dimmer",
+					"addedClass":"fadeout"					
+				}
+			]
 		}
 	],
 	"outcome1a":[
@@ -122,7 +126,28 @@ var actions = {
 		},
 		{
 			"slide":2,
-			"transitions":[]
+			"transitions":[
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"popdown"					
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".div-voucher-background",
+					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".div-voucher-panel",
+					"addedClass":"fadein"
+				}
+			]
 		},
 		{
 			"slide":3,
@@ -131,9 +156,175 @@ var actions = {
 		{
 			"slide":4,
 			"transitions":[]
+		},
+		{
+			"slide":5,
+			"transitions":[
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"popdown"
+				},
+				{
+					"selectedItem":".div-voucher-background",
+					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".div-voucher-panel",
+					"addedClass":"fadein"
+				}
+			]
 		}
 	],
 	"outcome1b":[
+		{
+			"slide":0,
+			"transitions":[
+				{
+					"selectedItem":"*[data-ix='next-btn-load']",
+					"addedClass":"animate"					
+				},
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"highlight"					
+				},
+				{
+					"selectedItem":".image-bullet-sprite.empty",
+					"addedClass":"pulse"
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"
+				}				
+			]
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"popdown"					
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".div-voucher-background",
+					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".div-voucher-panel",
+					"addedClass":"fadein"
+				}
+			]
+		},
+		{
+			"slide":3,
+			"transitions":[]
+		},
+		{
+			"slide":4,
+			"transitions":[]
+		},
+		{
+			"slide":5,
+			"transitions":[
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"popdown"
+				},
+				{
+					"selectedItem":".div-voucher-background",
+					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".div-voucher-panel",
+					"addedClass":"fadein"
+				}
+			]
+		}
+	],
+	"scenario2":[
+		{
+			"slide":0,
+			"transitions":[
+				{
+					"selectedItem":"*[data-ix='next-btn-load']",
+					"addedClass":"animate"					
+				},
+				{
+					"selectedItem":".div-dimmer.intro",
+					"addedClass":"dim"					
+				},
+				{
+					"selectedItem":".div-scenario-background",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"					
+				}
+			]
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"					
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"					
+				}
+			]
+		}
+	],
+	"decision2":[
+		{
+			"slide":0,
+			"transitions":[
+				{
+					"selectedItem":".div-decision-button.choice-1",
+					"addedClass":"appear"					
+				},{
+					"selectedItem":".div-decision-button.choice-2",
+					"addedClass":"appear"					
+				},{
+					"selectedItem":".div-decision-button.choice-3",
+					"addedClass":"appear"					
+				},{
+					"selectedItem":".div-dimmer",
+					"addedClass":"fadeout"					
+				}
+			]
+		}
+	],
+	"outcome2a":[
 		{
 			"slide":0,
 			"transitions":[
@@ -169,38 +360,55 @@ var actions = {
 		},
 		{
 			"slide":3,
-			"transitions":[]
+			"transitions":[
+				{
+					"selectedItem":".div-score-bottom",
+					"addedClass":"popdown"					
+				},
+				{
+					"selectedItem":".img-2up-left",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".img-2up-right",
+					"addedClass":"popup"
+				},
+				{
+					"selectedItem":".div-voucher-background",
+					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".div-voucher-panel",
+					"addedClass":"fadein"
+				}
+			]
 		},
 		{
 			"slide":4,
 			"transitions":[]
-		}
-	],
-	"scenario2":[
+		},
 		{
-			"slide":0,
+			"slide":6,
 			"transitions":[
 				{
-					"selectedItem":"*[data-ix='next-btn-load']",
-					"addedClass":"animate"					
+					"selectedItem":".div-score-bottom",
+					"addedClass":"popdown"
 				},
 				{
-					"selectedItem":".div-dimmer.intro",
-					"addedClass":"dim"					
+					"selectedItem":".div-voucher-background",
+					"addedClass":"fadein"
 				},
-				{
-					"selectedItem":".div-scenario-background",
-					"addedClass":"popup"					
-				},
-				{
-					"selectedItem":".img-2up-right.building",
-					"addedClass":"popup"					
-				},
-				{
-					"selectedItem":".img-2up-left.car",
-					"addedClass":"popup"					
+				{				
+					"selectedItem":".div-voucher-panel",
+					"addedClass":"fadein"
 				}
 			]
+		}
+	],
+	"outcome2b":[
+{
+			"slide":0,
+			"transitions":[]
 		},
 		{
 			"slide":1,
@@ -212,52 +420,42 @@ var actions = {
 		},
 		{
 			"slide":3,
-			"transitions":[
-				{
-					"selectedItem":".img-2up-right.building",
-					"addedClass":"popup"					
-				},
-				{
-					"selectedItem":".img-2up-left.car",
-					"addedClass":"popup"					
-				}
-			]
-		}
-	],
-	"decision2":[
-		{
-			"slide":0,
-			"transitions":[
-				{
-					"selectedItem":".div-decision-button.choice-1",
-					"addedClass":"appear"					
-				},{
-					"selectedItem":".div-decision-button.choice-2",
-					"addedClass":"appear"					
-				},{
-					"selectedItem":".div-decision-button.choice-3",
-					"addedClass":"appear"					
-				}
-			]
-		}
-	],
-	"outcome2a":[
-		{
-			"slide":0,
 			"transitions":[]
-		}
-	],
-	"outcome2b":[
+		},
 		{
-			"slide":0,
+			"slide":4,
 			"transitions":[]
-		}
+		},
+		{
+			"slide":5,
+			"transitions":[]
+		}	
 	],
 	"outcome2c":[
-		{
+{
 			"slide":0,
 			"transitions":[]
-		}
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[]
+		},
+		{
+			"slide":4,
+			"transitions":[]
+		},
+		{
+			"slide":5,
+			"transitions":[]
+		}	
 	],
 	"scenario3":[
 		{
@@ -272,16 +470,56 @@ var actions = {
 		}
 	],
 	"outcome3a":[
-		{
+{
 			"slide":0,
 			"transitions":[]
-		}
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[]
+		},
+		{
+			"slide":4,
+			"transitions":[]
+		},
+		{
+			"slide":5,
+			"transitions":[]
+		}	
 	],
 	"outcome3b":[
-		{
+{
 			"slide":0,
 			"transitions":[]
-		}
+		},
+		{
+			"slide":1,
+			"transitions":[]
+		},
+		{
+			"slide":2,
+			"transitions":[]
+		},
+		{
+			"slide":3,
+			"transitions":[]
+		},
+		{
+			"slide":4,
+			"transitions":[]
+		},
+		{
+			"slide":5,
+			"transitions":[]
+		}	
 	],
 	"conclusion":[
 		{
