@@ -195,3 +195,13 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 	text-decoration: none;
 	color: #fff;
 }
+
+.btn-scenario {
+	background-image: url(../images/btn-start-blue.svg);
+	    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-scenario:hover { 
+	background-position: -8px 5px;
+}
