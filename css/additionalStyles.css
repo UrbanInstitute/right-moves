@@ -179,3 +179,19 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 	transition: opacity 800ms ease-in-out;
 }
 
+.arrow-right-last.hide, .slider-next-btn.hide {
+	display: none;
+}
+
+.slider-next-btn.left.hide {
+	display: block;
+}
+
+.span-resources-arrow {
+	cursor: pointer;	
+}
+
+.span-resources-arrow a {
+	text-decoration: none;
+	color: #fff;
+}
