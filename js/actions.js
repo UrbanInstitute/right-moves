@@ -26,7 +26,12 @@ var actions = {
 		},
 		{
 			"slide":2,
-			"transitions":[]
+			"transitions":[
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}
+			]
 		}
 	],
 	"scenario1":[
@@ -73,7 +78,11 @@ var actions = {
 				{
 					"selectedItem":".img-2up-left.car",
 					"addedClass":"popup"					
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -90,7 +99,11 @@ var actions = {
 				},{
 					"selectedItem":".div-dimmer",
 					"addedClass":"fadeout"					
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -171,7 +184,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -252,7 +269,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -300,7 +321,11 @@ var actions = {
 				{
 					"selectedItem":".img-2up-left",
 					"addedClass":"popup"					
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -320,7 +345,11 @@ var actions = {
 				},{
 					"selectedItem":".div-dimmer",
 					"addedClass":"fadeout"					
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -401,7 +430,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -477,7 +510,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -553,7 +590,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -601,7 +642,11 @@ var actions = {
 				{
 					"selectedItem":".img-2up-left",
 					"addedClass":"popup"					
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -618,7 +663,11 @@ var actions = {
 				},{
 					"selectedItem":".div-dimmer",
 					"addedClass":"fadeout"					
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -699,7 +748,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],
@@ -780,7 +833,11 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
-				}
+				},
+				{
+					"selectedItem":".move-button",
+					"addedClass":"active"					
+				}				
 			]
 		}
 	],

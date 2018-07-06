@@ -87,6 +87,31 @@ $(".move-button").click(function(e) {
 	//show the first text subslide
 	$("#" + nextItem + ".active .slide-outcome").eq(0).addClass("active")
 
+
+
+	// if conclusion, fix the html based on life levels
+	if (nextItem === "conclusion") {
+		var Injurylist = [];
+		console.log("conclusion")
+		if (lifeLevels[0] !== 3) {
+			Injurylist.push("health")
+		}
+
+		if (lifeLevels[1] !== 3) {
+			Injurylist.push("education")
+		}
+
+		if (lifeLevels[2] !== 3) {
+			Injurylist.push("finances")
+		}
+
+		Injurylist = formatInjury(Injurylist);
+
+		$("#Injurylist").html(Injurylist)
+
+	}	
+
+
 	// on forward or backward button
 	$("#" + nextItem + " .slider-next-btn.w-inline-block").click(function(e) {
 		e.stopPropagation()
@@ -111,21 +136,28 @@ $(".move-button").click(function(e) {
 
 			// If there's other animations associated with this, search for them, and trigger them.
 			// have to be able to add if forward and remove if going backward. 
-			var transitionBucket = actions[nextItem][subslideIndex].transitions;
-			for (var i = 0; i < transitionBucket.length; i++) {							
-				$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).toggleClass(transitionBucket[i].addedClass)
-			}
+		
+		if (direction === 1) {
+			var transitionBucket = actions[nextItem][subslideIndex].transitions;	
+		} else {
+			var transitionBucket = actions[nextItem][subslideIndex+1].transitions;
+		}
+
+
+		for (var i = 0; i < transitionBucket.length; i++) {							
+			$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).toggleClass(transitionBucket[i].addedClass)
+		}
 
 		// at the end of the slide
 
 		if (subslideIndex+1 === $("#" + nextItem + ".active .slide-outcome").length) {
-			console.log("end")
+			// console.log("end")
 			// at the end, swap out the right arrows
 			$("#" + nextItem + ".active .arrow-right").addClass("disappear")
 			$("#" + nextItem + ".active .arrow-right-last").addClass("appear")
 
 		} else if (subslideIndex === 0) {
-			console.log("start")
+			// console.log("start")
 			$("#" + nextItem + ".active .arrow-left").addClass("disappear")						
 		} else {
 			$("#" + nextItem + ".active .arrow-right").removeClass("disappear")
@@ -170,3 +202,16 @@ function bulletFlicker (lifeLevels, nextItem) {
 }
 
 
+function formatInjury (Injurylist) {
+	var final;
+	if (Injurylist.length === 1) {
+		final = Injurylist[0]
+	} else if (Injurylist.length === 2) {
+		final = Injurylist[0] + " and " + Injurylist[1]
+	} else {
+		final =  Injurylist[0] + ", " + Injurylist[1] + " and " + Injurylist[2];
+	}
+	console.log(final)
+
+	return final
+}

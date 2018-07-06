@@ -35,6 +35,11 @@ html.w-mod-js *[data-ix="next-btn-load"].animate {
 
 .move-button {
 	cursor: pointer;
+	display: none;
+}
+
+.move-button.active {
+	display: block;
 }
 
 .slide-outcome {
@@ -198,14 +203,6 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 	animation: pulse-bullet .2s linear 1.25s 3;	
 	float: right;
 }
-/*
-.image-bullet-sprite.lessen.pulse {
-	animation: pulse-bullet .2s linear 1.25s 3;	
-}
-
-.image-bullet-sprite.empty {
-	float: right;
-}*/
 
 @keyframes pulse-bullet {
   0% {
@@ -217,4 +214,8 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
   100% {
    	float: right; 
   }
+}
+
+#Injurylist {
+	font-weight: bold;
 }
