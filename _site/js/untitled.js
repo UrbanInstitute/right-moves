@@ -1,0 +1,35 @@
+"outcome1a":[{
+	"health":-1,
+	"education":-1,
+	"financial":0
+}],
+"outcome1b":[{
+	"health":0,
+	"education":0,
+	"financial":-1
+}],
+"outcome2a":[{
+	"health":-1,
+	"education":-1,
+	"financial":-1
+}],
+"outcome2b":[{
+	"health":0,
+	"education":-1,
+	"financial":-1
+}],
+"outcome2c":[{
+	"health":-1,
+	"education":-1,
+	"financial":0
+}],
+"outcome3a":[{
+	"health":-1,
+	"education":-1,
+	"financial":-1
+}],
+"outcome3b":[{
+	"health":-1,
+	"education":-1,
+	"financial":0
+}]

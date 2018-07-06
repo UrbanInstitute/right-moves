@@ -133,26 +133,6 @@ html.w-mod-js *[data-ix="illustration-hider"].popup {
   }
 }
 
-.image-bullet-sprite.lessen.pulse {
-	animation: pulse-bullet .2s linear 1.25s 3;	
-}
-
-.image-bullet-sprite.empty {
-	float: right;
-}
-
-@keyframes pulse-bullet {
-  0% {
-	float: right; 
-  }
-  50% {
-    float: left; 
-  }
-  100% {
-   	float: right; 
-  }
-}
-
 .div-voucher-background {
 	transition: opacity 800ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
@@ -204,4 +184,37 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 
 .btn-scenario:hover { 
 	background-position: -8px 5px;
+}
+
+.image-bullet-sprite {
+	float: right;
+}
+
+.image-bullet-sprite.full {
+	float: left;
+}
+
+.image-bullet-sprite.full.flicker {
+	animation: pulse-bullet .2s linear 1.25s 3;	
+	float: right;
+}
+/*
+.image-bullet-sprite.lessen.pulse {
+	animation: pulse-bullet .2s linear 1.25s 3;	
+}
+
+.image-bullet-sprite.empty {
+	float: right;
+}*/
+
+@keyframes pulse-bullet {
+  0% {
+	float: right; 
+  }
+  50% {
+    float: left; 
+  }
+  100% {
+   	float: right; 
+  }
 }

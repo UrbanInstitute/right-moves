@@ -1,4 +1,42 @@
-var healthbars = [3,3,3]
+var lifeLevels = [3,3,3]
+
+var lifeReductions = {
+	"outcome1a":[{
+		"health":-1,
+		"education":-1,
+		"financial":0
+	}],
+	"outcome1b":[{
+		"health":0,
+		"education":0,
+		"financial":-1
+	}],
+	"outcome2a":[{
+		"health":-1,
+		"education":-1,
+		"financial":-1
+	}],
+	"outcome2b":[{
+		"health":0,
+		"education":-1,
+		"financial":-1
+	}],
+	"outcome2c":[{
+		"health":-1,
+		"education":-1,
+		"financial":0
+	}],
+	"outcome3a":[{
+		"health":-1,
+		"education":-1,
+		"financial":-1
+	}],
+	"outcome3b":[{
+		"health":-1,
+		"education":-1,
+		"financial":0
+	}]
+}
 
 // On load, allow first TWO slides to exist with z indexs differing them...
 // Then, every move-button, advance to the under one, destroy the old, and make the on deck one become underneath. 
@@ -12,7 +50,7 @@ $(".move-button").click(function(e) {
 	
 	var nextItem = $(this).attr("next");	
 
-	$("#" + nextItem).addClass("active");
+	$("#" + nextItem).addClass("active");	
 
 	//trigger the things that are supposed to happen on page appear
 		// if other animations here, search for them, then trigger them 
@@ -20,16 +58,27 @@ $(".move-button").click(function(e) {
         // $("#" + nextItem + ".active *[data-ix='next-btn-load']").addClass("animate")
 		
 		var transitionBucket = actions[nextItem][0].transitions;
-		for (var i = 0; i < transitionBucket.length; i++) {
-			// console.log(transitionBucket[i])
-			// console.log($("#" + nextItem + ".active " + transitionBucket[i].selectedItem));
+		for (var i = 0; i < transitionBucket.length; i++) {		
 
 			$("#" + nextItem + ".active " + transitionBucket[i].selectedItem).addClass(transitionBucket[i].addedClass)
 		}
 
     }, 20);
+	
+	bulletFill(lifeLevels, nextItem)
 
     // hide bullets that have been lost
+    for (item in lifeReductions) {
+       	if (item === nextItem) {
+    		lifeLevels[0] += lifeReductions[item][0].health;
+    		lifeLevels[1] += lifeReductions[item][0].education;
+    		lifeLevels[2] += lifeReductions[item][0].financial;    		    		
+    	
+    		bulletFlicker(lifeLevels, nextItem)
+    	} 
+    }
+
+    
 
 
 	// hide the left arrow at first
@@ -75,10 +124,6 @@ $(".move-button").click(function(e) {
 			$("#" + nextItem + ".active .arrow-right").addClass("disappear")
 			$("#" + nextItem + ".active .arrow-right-last").addClass("appear")
 
-			// make changes to the health bars global here
-			console.log($("#" + nextItem + ".active img[src='images/score-sprite-education.svg'].empty"))
-			
-
 		} else if (subslideIndex === 0) {
 			console.log("start")
 			$("#" + nextItem + ".active .arrow-left").addClass("disappear")						
@@ -92,26 +137,36 @@ $(".move-button").click(function(e) {
 
 })
 
+function bulletFill(lifeLevels, nextItem) {
+	for (var i = 0; i < lifeLevels.length; i++) {		
+		for (var j = 0; j < lifeLevels[i]; j++) {
+			if (i === 0) {
+				$("#" + nextItem + ".active img[src='images/score-sprite-health.svg']").eq(j).addClass("full")
+			} else if (i === 1) {
+				$("#" + nextItem + ".active img[src='images/score-sprite-education.svg']").eq(j).addClass("full")
+			} else {
+				$("#" + nextItem + ".active img[src='images/score-sprite-financial.svg']").eq(j).addClass("full")
+			}
+		}
+	}
+}
 
-// $("[data-ix]").click(function(e) {
+function bulletFlicker (lifeLevels, nextItem) {
+	
+	if ($("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length > lifeLevels[0]) {
+		var thisLength = $("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length - 1;
+		$("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").eq(thisLength).addClass("flicker")
+	}
 
-// 	console.log($(this).attr("data-ix"))
+	if ($("#" + nextItem + ".active img[src='images/score-sprite-education.svg'].full").length > lifeLevels[1]) {
+		var thisLength = $("#" + nextItem + ".active img[src='images/score-sprite-education.svg'].full").length - 1;
+		$("#" + nextItem + ".active img[src='images/score-sprite-education.svg'].full").eq(thisLength).addClass("flicker")
+	}
 
-// });
+	if ($("#" + nextItem + ".active img[src='images/score-sprite-financial.svg'].full").length > lifeLevels[2]) {
+		var thisLength = $("#" + nextItem + ".active img[src='images/score-sprite-financial.svg'].full").length - 1;
+		$("#" + nextItem + ".active img[src='images/score-sprite-financial.svg'].full").eq(thisLength).addClass("flicker")
+	}
+}
 
-
-
-// Each slide appear on click of next, "display: block"
-// Entry items on "display:block", activate
-// On click=>index=>advance, shit happens
-
-
-// To do, list all 
-	// Pages
-		// Triggers - affected pairs
-	// Create json for this 
-
-// Create indexes for advancing 
-	// overall page index (or id?)
-		// inside each page index of events
 
