@@ -1,5 +1,9 @@
-{% include first.html id="first" next1="introduction" %}
-{% include introduction.html id="introduction" next1="scenario1" %}
+---
+layout: default
+---
+    
+	{% include first.html id="first" next1="introduction" %}
+	{% include introduction.html id="introduction" next1="scenario1" %}
 	{% include scenario1.html id="scenario1" next1="decision1" %}	
 	{% include decision1.html id="decision1" next1="outcome1a" next2="outcome1b" %}
 	{% include outcome1a.html id="outcome1a" next1="scenario2" %}
