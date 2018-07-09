@@ -66,11 +66,15 @@ $(".move-button").click(function(e) {
     }, 20);
 	
 	bulletFill(lifeLevels, nextItem)
-	console.log("fill all bullets has been done")
+	
 
-
+	console.log(lifeReductions)
+	console.log(nextItem)
+	
     // hide bullets that have been lost
     for (item in lifeReductions) {
+    	console.log(item)
+
        	if (item === nextItem) {
     		lifeLevels[0] += lifeReductions[item][0].health;
     		lifeLevels[1] += lifeReductions[item][0].education;
