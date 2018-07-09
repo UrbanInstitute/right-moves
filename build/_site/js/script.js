@@ -184,9 +184,12 @@ function bulletFill(lifeLevels, nextItem) {
 }
 
 function bulletFlicker (lifeLevels, nextItem) {
-	
+	console.log('in flicker')
 	if ($("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length > lifeLevels[0]) {
+		console.log("in the health boy")
 		var thisLength = $("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length - 1;
+		console.log(thisLength)
+		console.log($("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full"))
 		$("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").eq(thisLength).addClass("flicker")
 	}
 
