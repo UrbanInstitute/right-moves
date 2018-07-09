@@ -66,6 +66,8 @@ $(".move-button").click(function(e) {
     }, 20);
 	
 	bulletFill(lifeLevels, nextItem)
+	console.log("fill all bullets has been done")
+
 
     // hide bullets that have been lost
     for (item in lifeReductions) {
@@ -73,11 +75,11 @@ $(".move-button").click(function(e) {
     		lifeLevels[0] += lifeReductions[item][0].health;
     		lifeLevels[1] += lifeReductions[item][0].education;
     		lifeLevels[2] += lifeReductions[item][0].financial;    		    		
-    	
+    		console.log("bout to flicker")
     		bulletFlicker(lifeLevels, nextItem)
     	} 
     }
-
+    console.log(lifeLevels)
     
 
 
@@ -92,7 +94,7 @@ $(".move-button").click(function(e) {
 	// if conclusion, fix the html based on life levels
 	if (nextItem === "conclusion") {
 		var Injurylist = [];
-		console.log("conclusion")
+
 		if (lifeLevels[0] !== 3) {
 			Injurylist.push("health")
 		}
@@ -214,7 +216,6 @@ function formatInjury (Injurylist) {
 	} else {
 		final =  Injurylist[0] + ", " + Injurylist[1] + " and " + Injurylist[2];
 	}
-	console.log(final)
 
 	return final
 }
