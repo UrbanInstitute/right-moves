@@ -10,46 +10,47 @@
       </div>
     </div>
     <div class="div-scenario">
-      <div data-animation="outin" data-easing="ease-in-quad" data-hide-arrows="1" data-autoplay-limit="1" data-duration="500" data-infinite="1" class="slider-outcomes w-slider">
-        <div class="w-slider-mask">
-          <div class="slide-outcome w-slide">
-            <p data-w-id="fdbdffcd-4ab8-2745-161d-dbbef5e94ba6" class="p-scenario">In this game, you are the head of a family with limited means and no government assistance. Your goal is to make decisions to maximize your family’s education, health, and financial well-being.</p>
-          </div>
-          <div class="slide-outcome w-slide" data-ix="preview-score-{{ include.id }}">
-            <p class="p-scenario">After each choice, indicators at the top of the screen will show your results. Then, you’ll see how the scenario might have been different if you had a housing voucher.
-            <div class="div-animation-trigger"></div>
-          </div>
-          <div class="slide-outcome w-slide" data-ix="next-scene-trigger-{{ include.id }}">
-            <p class="p-scenario">To learn more about the results, stick around for resources at the end.<span class="span-question">
+      <div class="div-slide-area">
+        <div data-animation="outin" data-easing="ease-in-quad" data-hide-arrows="1" data-autoplay-limit="1" data-duration="500" data-infinite="1" class="slider-outcomes w-slider">
+          <div class="w-slider-mask">
+            <div class="slide-outcome w-slide">
+              <p data-w-id="fdbdffcd-4ab8-2745-161d-dbbef5e94ba6" class="p-scenario">In this game, you are the head of a family with limited means and no government assistance. Your goal is to make decisions to maximize your family’s education, health, and financial well-being.</p>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="preview-score-{{ include.id }}">
+              <p class="p-scenario">After each choice, indicators at the top of the screen will show your results. Then, you’ll see how the scenario might have been different if you had a housing voucher.
+              <div class="div-animation-trigger"></div>
+            </div>
+            <div class="slide-outcome w-slide" data-ix="next-scene-trigger-{{ include.id }}">
+              <p class="p-scenario">To learn more about the results, stick around for resources at the end.<span class="span-question">
 
-              <a next="{{ include.next1 }}" class="a-inline move-button">Let&#x27;s get started!</a>
+                <a next="{{ include.next1 }}" class="a-inline move-button">Let&#x27;s get started!</a>
 
-            </span></p>
+              </span></p>
 
-            <!-- I think this animation is hidden anyway -->
-            <div class="div-animation-trigger" data-ix="ans02-hide-fam"></div>
+              <!-- I think this animation is hidden anyway -->
+              <div class="div-animation-trigger" data-ix="ans02-hide-fam"></div>
+            </div>
           </div>
-        </div>
-        <div class="arrow-left w-slider-arrow-left">
+          <div class="arrow-left w-slider-arrow-left">
+            
+            <a class="slider-next-btn left w-inline-block"></a>
+            <div class="slider-icon w-icon-slider-left"></div>
+          </div>
+          <div class="arrow-right w-slider-arrow-right">
+
+            <!-- doesn't appear to be doing anything -->
+            <a class="slider-next-btn w-inline-block" data-ix="next-btn-load"></a>
+            <div class="block-next">Next</div>
+            <div class="slider-icon w-icon-slider-right"></div>
+          </div>
           
-          <a class="slider-next-btn left w-inline-block"></a>
-          <div class="slider-icon w-icon-slider-left"></div>
-        </div>
-        <div class="arrow-right w-slider-arrow-right">
+          <a next="{{ include.next1 }}" class="arrow-right-last t-{{ include.id }} w-inline-block move-button">
 
-          <!-- doesn't appear to be doing anything -->
-          <a class="slider-next-btn w-inline-block" data-ix="next-btn-load"></a>
-          <div class="block-next">Next</div>
-          <div class="slider-icon w-icon-slider-right"></div>
+            <div class="slider-next-btn"></div>
+          </a>
+          <div class="slide-nav w-slider-nav"></div>
         </div>
-        
-        <a next="{{ include.next1 }}" class="arrow-right-last t-{{ include.id }} w-inline-block move-button">
-
-          <div class="slider-next-btn"></div>
-        </a>
-        <div class="slide-nav w-slider-nav"></div>
       </div>
-      <div class="div-slide-area"></div>
     </div>
     <div class="div-score-bottom t-{{ include.id }}" data-ix="hide-score">
       <div class="div-meter-block w-clearfix">

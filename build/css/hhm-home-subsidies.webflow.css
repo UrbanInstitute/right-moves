@@ -420,6 +420,7 @@ p {
   overflow: visible;
   margin-top: 0px;
   margin-bottom: 0px;
+  width: 7%;
 }
 
 .arrow-left {
@@ -1460,6 +1461,9 @@ html.w-mod-js *[data-ix="illustration-hider"] {
     bottom: 25%;
   }
   .arrow-right {
+    width: 10%;
+  }
+  .arrow-right-last {
     width: 10%;
   }
   .arrow-left {
