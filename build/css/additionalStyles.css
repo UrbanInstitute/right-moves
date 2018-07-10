@@ -266,3 +266,20 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 .block-credit a:hover {
 	text-decoration: underline;
 }	
+
+.bigup {
+	z-index: 100000;	
+}
+
+
+.w-slider-mask.visiblizer {
+	overflow: visible;
+}
+
+.btn-start-back {
+	z-index: 1000;
+}
+
+.img-tagline {
+	z-index: 1000;
+}
