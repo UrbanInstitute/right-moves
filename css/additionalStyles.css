@@ -52,6 +52,21 @@ html.w-mod-js *[data-ix="next-btn-load"].animate {
 	opacity: 1;
 } 
 
+.slide-outcome.voucher {
+	opacity: 0;
+} 
+
+.slide-outcome.voucher.active {
+	opacity: 0;
+} 
+
+.slide-outcome.voucher.active.fadeinLate {
+	opacity: 1;
+	-webkit-transition: opacity 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53) 1000ms;
+	transition: opacity 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53) 1000ms;
+} 
+
+
 /*Animations*/
 
 html.w-mod-js *[data-ix="hide-score"] {

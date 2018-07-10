@@ -159,6 +159,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
@@ -244,6 +248,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
@@ -409,6 +417,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
@@ -489,6 +501,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
@@ -569,6 +585,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
@@ -723,6 +743,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
@@ -808,6 +832,10 @@ var actions = {
 				{				
 					"selectedItem":".div-voucher-panel",
 					"addedClass":"fadein"
+				},
+				{				
+					"selectedItem":".slide-outcome.voucher",
+					"addedClass":"fadeinLate"
 				}
 			]
 		},
