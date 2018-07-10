@@ -72,7 +72,7 @@ $(".move-button").click(function(e) {
 	console.log(nextItem)
 	
     // hide bullets that have been lost
-    for (item in lifeReductions) {
+    for (var item in lifeReductions) {
     	console.log(item)
 
        	if (item === nextItem) {
