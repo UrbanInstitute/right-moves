@@ -218,7 +218,7 @@ function formatInjury (Injurylist) {
 	} else if (Injurylist.length === 2) {
 		final = Injurylist[0] + " and " + Injurylist[1]
 	} else {
-		final =  Injurylist[0] + ", " + Injurylist[1] + " and " + Injurylist[2];
+		final =  Injurylist[0] + ", " + Injurylist[1] + ", and " + Injurylist[2];
 	}
 
 	return final

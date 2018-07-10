@@ -864,7 +864,7 @@ var actions = {
 				{
 					"selectedItem":".div-score-bottom",
 					"addedClass":"popdown"					
-				}				
+				}		
 			]
 		},
 		{
@@ -877,6 +877,10 @@ var actions = {
 				{
 					"selectedItem":".arrow-right-last",
 					"addedClass":"hide"					
+				},
+				{
+					"selectedItem":".div-logo-global",
+					"addedClass":"hide"
 				}
 			]
 		}

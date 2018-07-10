@@ -252,4 +252,17 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 	cursor: pointer;
 }
 
+.div-logo-global.hide {
+	opacity: 0;
+	pointer-events: none;	
+	transition: opacity 500ms;
+}
 
+.block-credit a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.block-credit a:hover {
+	text-decoration: underline;
+}	
