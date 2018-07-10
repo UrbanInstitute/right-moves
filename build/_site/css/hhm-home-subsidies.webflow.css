@@ -1017,7 +1017,7 @@ p {
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: 0px;
+  bottom: 13px;
   z-index: 18;
   display: block;
   width: 100%;
@@ -1189,7 +1189,7 @@ p {
 
 .block-back-link {
   position: relative;
-  top: 50%;
+  top: 45%;
   display: inline-block;
   margin: 5%;
   -webkit-transform: translate(0px, -50%);

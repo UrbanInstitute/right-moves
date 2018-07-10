@@ -67,25 +67,16 @@ $(".move-button").click(function(e) {
 	
 	bulletFill(lifeLevels, nextItem)
 	
-
-	console.log(lifeReductions)
-	console.log(nextItem)
-	
     // hide bullets that have been lost
     for (var item in lifeReductions) {
-    	console.log(item)
 
        	if (item === nextItem) {
     		lifeLevels[0] += lifeReductions[item][0].health;
     		lifeLevels[1] += lifeReductions[item][0].education;
     		lifeLevels[2] += lifeReductions[item][0].financial;    		    		
-    		console.log("bout to flicker")
     		bulletFlicker(lifeLevels, nextItem)
     	} 
     }
-    console.log(lifeLevels)
-    
-
 
 	// hide the left arrow at first
 	$("#" + nextItem + ".active .arrow-left").addClass("disappear")		
@@ -190,12 +181,8 @@ function bulletFill(lifeLevels, nextItem) {
 }
 
 function bulletFlicker (lifeLevels, nextItem) {
-	console.log('in flicker')
-	if ($("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length > lifeLevels[0]) {
-		console.log("in the health boy")
+	if ($("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length > lifeLevels[0]) {		
 		var thisLength = $("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").length - 1;
-		console.log(thisLength)
-		console.log($("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full"))
 		$("#" + nextItem + ".active img[src='images/score-sprite-health.svg'].full").eq(thisLength).addClass("flicker")
 	}
 
