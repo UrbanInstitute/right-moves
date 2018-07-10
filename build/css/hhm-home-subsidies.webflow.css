@@ -1657,6 +1657,7 @@ html.w-mod-js *[data-ix="illustration-hider"] {
   }
   .div-voucher-panel-front {
     border-width: 5px;
+    margin-top: 1%;
   }
   .div-voucher-title {
     display: block;
