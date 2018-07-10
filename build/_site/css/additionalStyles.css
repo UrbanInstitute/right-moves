@@ -239,3 +239,17 @@ html.w-mod-js *[data-ix="dimmer"].fadeout {
 #Injurylist {
 	font-weight: bold;
 }
+
+.div-hhm-home-link-inner:hover .block-back-link {
+	transition: opacity 500ms; opacity: 0;
+}
+
+.div-hhm-home-link-inner:hover .img-back-arrow {
+	transition: opacity 500ms; opacity:1 ;
+}
+
+.div-share-icn-wrapper {
+	cursor: pointer;
+}
+
+
