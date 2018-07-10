@@ -864,7 +864,12 @@ var actions = {
 				{
 					"selectedItem":".div-score-bottom",
 					"addedClass":"popdown"					
-				},
+				}				
+			]
+		},
+		{
+			"slide":4,
+			"transitions":[		
 				{
 					"selectedItem":".slider-next-btn",
 					"addedClass":"hide"					
@@ -873,7 +878,6 @@ var actions = {
 					"selectedItem":".arrow-right-last",
 					"addedClass":"hide"					
 				}
-				
 			]
 		}
 	]
