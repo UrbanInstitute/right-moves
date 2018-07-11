@@ -10,15 +10,15 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 
 root directory
 
-	* README.md 
-		- You are here.
-	* index.html
-		- compiled index for the feature. This is what people look at. 
-	* buildindex.sh
-		- calling this function in the root directory copies the contents of the `build/_site/` folder into the root folder. 
-	* build/
-		- directory that contains the working jekyll directories. See below
-	* css/, fonts/, images/, js/, and assets/ are all directories that are copied over from the `build/_site/` folder. They contain what they say they do, and are referenced within the `index.html` or the stylesheets, etc. More info on their contents below. 
+* README.md 
+	- You are here.
+* index.html
+	- compiled index for the feature. This is what people look at. 
+* buildindex.sh
+	- calling this function in the root directory copies the contents of the `build/_site/` folder into the root folder. 
+* build/
+	- directory that contains the working jekyll directories. See below
+* css/, fonts/, images/, js/, and assets/ are all directories that are copied over from the `build/_site/` folder. They contain what they say they do, and are referenced within the `index.html` or the stylesheets, etc. More info on their contents below. 
 
 
 build/ directory
