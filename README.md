@@ -53,7 +53,6 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 ## Completed Work
 - I added each slide to the `index.html`, using the following steps. 
 - I edited each slide to have a unique ID and unique links to next slides (steps below). 
-- I edited each of the (non-onload) animations within each slide to have a unique id affixed, so that they would ONLY be triggered within each slide. 
 
 ### adding an _include file to the index.html
 
@@ -77,64 +76,3 @@ To get an in-depth look at the directory structure of a general [jekyll site go 
 * NOTE: data-ix elements and their corresponding selector elements will NOT be the same elements but they will be in the same _include
 * NOTE: if there is no selector, just copy JSON entry and append the include id
 * NOTE: anything with trigger type=LOAD is changed at the moment. 
-
-## To Do (in rough order of importance)
-
-- ~Fix the errors related to the last three _include/ files (see known issues).~
-- Fix voucher style errors (see known issues)
-- Add remaining copy into the slides that don't have the complete copy. Emily should know where to find this final copy.
-- Edit all clickable items to have `cursor:pointer` styles.
-- Add in links to the `/_includes/conclusion.html` file.
-- Make all "buttons" move up and down on hover
-- Fix resize issues
-- Other style changes
-- Figure out how to publish the _site folder to apps-staging
-- circulate to John, Maya, et al.
-- uncomment google tag/analytics/etc
-- get metas and shares from Nicole
-- Publish
-
-### Possible enhancements?
-
-- It may be preferable to "load" or display each slide on the advancement to that slide, rather than the current solution which just moved it up in the z-index. For some reason, the display: none vs. display: block option was not working with the webflow but changing the z-index was. 
-
-## Known Issues
-
-### Big Picture
-
-- It is unknown to me (Dan), how or if we need to attribute Webflow since we are more or less using large parts of the code that it generated. 
-- animations for new scenes happen on load, not on reveal. They should happen on reveal as in the design. **I haven't edited these animations at all in the `webflow.js` file.** They contain `"type":"load",` in their json entry. My suggestion is that their `data-ix` animation entry is found with the json, and some custom js is added to `script.js` to trigger these defined styles on click forward. Some sort of index will need to be created, which tracks which "slide" is being triggered or un-triggered. 
-- **If you comment out _include files in the `index.html` file, Jekyll does not appear to respect that. In order to remove include calls, you must delete them (temporarily) from `index.html`. This is why I have a backup of the include call markup in `include_list.html`**. 
-- Voucher styles/animations are not being correctly called by the webflow default. I have done a good amount of troubleshooting, trying to figure out what's going on, and I can't pinpoint it. Rather than fixing within the webflow js framework, my suggestion is to trigger each voucher slide in/out with some custom jquery work. If you did this, I would suggest removing the voucher data-ix calls on each of those outcome html pages. 
-- It appears that the reduction in "points" is incorrect across all outcome htmls. It is the same in every one which seems incorrect. I would guess this is because John put in placeholder information rather than the actual "point"/"score" reduction. 
-
-
-### Specific
-
-- Choice 3's last right arrow appears to be missing for some reason. I believe this means that for some reason, the `next-scene-trigger-scenario3` animation is not correctly being triggered. It could also have something to do with the corresponding trigger, which is found on the `.arrow-right-last.t-scenario3` div. 
-- Possibly related or possibly not, the `outcome3a.html`, `outcome3b.html`, and `conclusion.html` includes appear to be causing rendering/load issues within the rest of the page. I haven't been able to troubleshoot it yet, unfortunately. But I can say that similar issues were caused, previously, when `data-ix` animation calls were not made specific to the page. In other words, it was happening when a `data-ix` call was causing multiple selectors to be triggered. 
-	- My suggestion for how to start troubleshooting this would be to start by recreating the _include file for each of these three pages, as well as the `data-ix` entries in the `webflow.js` json of animations. It is possible that there are errors within the current set up that I am having trouble seeing. 
-	- Additionally, I would test if these files are placed early in the sequence, if they would still cause the same problems. 
-
-## Webflow Animations that appear to not be functioning or called. 
-
-(note: this isn't a necessarily a problem, but rather an FYI)
-
-At the end of the project, it may make sense to remove these from the html of the includes, since we don't really know why they're there and what they are doing. My belief is that they're artifacts of some other part of John's design proces. He might have info if you explain to him where its happening. 
-
-* In all pages, any of these appear to not be functioning
-    * next-btn-load
-    * car-appear
-    * dramatic-pause
-    * illustration-hider
-* introduction.html
-    * data-ix="ans02-hide-fam”
-    * data-ix="buildings-out”
-    * data-ix="hide-score”
-* Outcome1a.html, outcome2a.html
-    * ans02-hide-fam
-    * next-btn-load (load)
-
-
-
-
