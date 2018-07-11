@@ -65,5 +65,6 @@ build/ directory
 
 `$ bash buildindex.sh`
 
+Then you can add, commit, and push changes to the remote repo. 
 
 That is all....have a nice day. 
