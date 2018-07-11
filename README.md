@@ -9,6 +9,7 @@
 To get an in-depth look at the directory structure of a general [jekyll site go here](https://jekyllrb.com/docs/structure/).
 
 root directory
+
 	* README.md 
 		- You are here.
 	* index.html
